@@ -1,0 +1,14 @@
+Lowest hanging Fruit For 
+
+String Calculator
+- Creating class StringCalculator and defining add method which takes input of type string and return result of type string.
+
+Birthday Greet
+- Identifying individuals birthday on todays's date
+
+Room Booking Using CQRS
+- Displaying available rooms when new user want to book a room
+
+FizzBuzz Game
+- Game correctly identifies multiples of 3, 5 and both 3 and 5, and prints the corresponding output Fizz, Buzz, or FizzBuzz accordingly.
+
