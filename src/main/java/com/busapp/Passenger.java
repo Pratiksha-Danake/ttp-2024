@@ -19,8 +19,6 @@ public class Passenger {
         this.fare = fare;
     }
 
-
-
     public int getPassengerId() {
         return passengerId;
     }
