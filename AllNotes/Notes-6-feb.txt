@@ -1,0 +1,44 @@
+06-Feb-2024
+
+Cherry Pick :
+- cherry pick means chossing a commit from one branch and applying it to another.
+- cherry pick applies the changes introduced by one or more existing commits to another branch.
+- cherry pick is similar to the git merge and rebase only the difference is that it allows you to apply the specific feature/changes instead of whole branch.
+
+--skip
+--continue
+
+Git revert :
+- The git revert command is a undo operation that offers a safe method of undoing changes.
+- creates the new commit id for the reverted changes
+- use unique commit id to revert the changes
+
+git log :
+- used to show the commits history with date,time and owner of the commit.
+
+Build Tools :
+- the software tools that automates the process of code compilation, dependency management and creating a executable software file.
+- the tools that automates the transformation of source code into a deployable, executale form.
+
+Key Objective :
+- Automate compilation
+- Manage dependencies
+- Task automation
+- Provide structured lifecycle
+
+Problems solved by the Build Tools:
+- Reduce complexity in compilation
+- Reduce inconsistencies
+- Reduce repititive tasks
+
+Build Tools Used :
+for languages like Java 
+- Gradle
+- Maven
+- Ant
+
+Javascript Package Manager
+- npm (node package manager)
+- yarn (yet another resource negotiator - 2016)
+
+

@@ -1,0 +1,117 @@
+07-Feb-2024
+
+Why Build-Tools?
+- downloading and managing the dependencies
+- compiling source code into binary\executable code
+- packaging libraries
+- runnning the tests
+- deployment to production systems
+
+Test Code: 
+- the codew which we write to test the applictaion code
+
+Executable code: 
+- the code to which the computer directly understand 
+- set of instructions written in a programming language that can be executed or run by a computer's processor.
+
+code coverage:
+- it is used to measure the extent to which the source code of a program has been execeuted during testing.
+
+Gated checkins:
+- ensure that changes made by developers meet certain criteria before they are integrated into the main codebase.
+
+Nightly builds:
+- source code retreival
+- compilation
+- tetsing
+- packaging
+- reporting
+
+Reason to use build tool:
+- automate the drudge work and makes the developer productive
+- manage dependencies
+- ensures correct execution order of commands
+- saves the time by parallelizing different tasks
+- precondition for continuous integration
+
+Artifact Id:
+- unique identifier for a specific project or artifact within a group.
+
+Group Id:
+- The group ID is a unique identifier for a group or organization that produces the project or artifact.
+- same as a Java package name
+
+IntelliJ Basic settings:
+- open file in single click
+- select opened files
+
+Backward Compatibility:
+- the ability to use previous version of plugin without updating the source code
+
+Plugin:
+- a plugin is a reusable component that extends or enhances the functionality of the build system.
+- provide a way to add new capabilities
+	 - compiling code
+	 - running tests
+	 - generating documentation
+	 - deploying artifacts
+Types:
+	- Custom plugin
+	- Community plugin
+	- Core plugins
+
+Version:
+- a unique identifier assigned to a particular release or iteration of a software product.
+- Written in the form like major-updates.minor-updates.fixes
+
+Tasks :
+
+1.Advantageds of Gradle over other Build-Tools:
+- Gradle is highly customizable.
+- Provides a wide range of IDE support custom builds.
+- Gradle avoids the compilation of Java.
+- It is easy to migrate to Gradle from Maven or other build tools.
+- It avoids the work by tracking input and output tasks and only runs the tasks that have been changed. Therefore it gives a faster performance.
+- It is easy to use and maintain.
+- It supports dependency management
+- It provides high performance and scalable builds.
+- Gradle integration process is quite easier.
+- It supports a multi-project structure.
+
+2.Write a Java program to connect with database with or without using the build tool
+- How to add jar file in IntelliJ
+	- download the har file for my-sql connector
+	- open InteiiJ
+	- click on File --> Project Structure --> Dependencies --> +
+	- select jar file path
+	- Apply changes
+
+//1.import packages
+import java.sql.*;
+
+public class JdbcConnection {
+    static final String DB_URL = "jdbc:mysql://localhost/amaap";
+    static final String USER = "root";
+    static final String PASS = "debu@2003";
+    static final String QUERY = "SELECT id, first, last, age FROM Employees";
+
+    public static void main(String[] args) {
+//2.open connection
+
+        try(Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(QUERY);) {
+            while (rs.next()) {
+                System.out.print("ID: " + rs.getInt("id"));
+                System.out.print(", Age: " + rs.getInt("age"));
+                System.out.print(", First: " + rs.getString("first"));
+                System.out.println(", Last: " + rs.getString("last"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+ 
