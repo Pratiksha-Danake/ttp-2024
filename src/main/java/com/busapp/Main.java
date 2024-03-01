@@ -13,26 +13,30 @@ public class Main {
         Bus bus = new Bus(capacity,vaccancies);
          int ch = 0;
          do{
-             System.out.println("Choose :\n1.Onboard com.busapp.Passenger\n2.List of com.busapp.Passenger\n4.Exit");
+             System.out.println("Choose :\n1.Onboard Passenger\n2.List of Passenger\n4.Exit");
              ch = sc.nextInt();
 
              switch (ch){
                  case 1:
                      System.out.println("Enter passenger details");
 
-                     System.out.println("Enter com.busapp.Passenger ID:");
+                     System.out.println("Enter passenger ID:");
                      int id = sc.nextInt();
 
-                     System.out.println("Enter com.busapp.Passenger Name:");
+                     System.out.println("Enter passenger Name:");
                      String name = sc.next();
 
                      System.out.println("Enter seat number to allocate:");
                      int seatNo = sc.nextInt();
 
-                     System.out.println("Enter com.busapp.Passenger fares");
+                     System.out.println("Enter passenger fares");
                      double fares = sc.nextDouble();
 
-                     bus.onboardPassenger(id, name, seatNo, fares);
+                     try {
+                         bus.onboardPassenger(id, name, seatNo, fares);
+                     } catch (BusFullException e) {
+                         System.out.println(e);
+                     }
 
                      break;
                  case 2:
